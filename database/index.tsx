@@ -10,7 +10,7 @@ export const jsonOrgan = [
         cargo: "SEGOV",
         nome: "Bruno Capadosia",
         idcargo: 7,
-        seções: [
+        divisões: [
           {
             id: 71,
             cargo: "Desenv Proj Fer Australia",
@@ -33,7 +33,7 @@ export const jsonOrgan = [
         cargo: "Gerente de Implantações",
         nome: "Carlos Padeiro",
         idcargo: 6,
-        seções: [
+        divisões: [
           {
             id: 60,
             cargo: "Supr. Estrat. Serviços e VLI",
@@ -98,7 +98,7 @@ export const jsonOrgan = [
         cargo: "Gerente de Operação",
         nome: "Carla Monicota",
         idcargo: 5,
-        seções: [
+        divisões: [
           {
             id: 44,
             cargo: "Inteligência e Desenv.",

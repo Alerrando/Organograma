@@ -1,5 +1,6 @@
 import { MinusCircle, PlusCircle } from "phosphor-react";
 import { useEffect, useState } from "react";
+import { Divisões } from "./Divisões";
 
 type SeçõesProps = {
   seções: any[];
@@ -8,10 +9,12 @@ type SeçõesProps = {
 export function Seções(props: SeçõesProps) {
   const { seções } = props;
   const [dropDowns, setDropDowns] = useState<any[]>(seções)
+
+  console.log(seções.length)
   
   return (
     <>
-      <div className="border-b-2 h-0 border-[#dbdbdb] mx-[79px]"></div>
+      <div className={`border-b-${seções.length > 1 ? "2" : "0"} h-0 border-[#dbdbdb] mx-[79px]`}></div>
       <div className="w-auto flex justify-between gap-7">
         {dropDowns.map((seção, index) => (
           <div className="block" key={index}>
@@ -21,7 +24,7 @@ export function Seções(props: SeçõesProps) {
                 <h2 className="text-[13px]">{seção.cargo}</h2>
                 <h2 className="text-[13px] font-semibold">{seção.nome}</h2>
                 <p className="text-[13px]">
-                  Quantidade de seções {seção.seções.length}
+                  Quantidade de seções {seção.divisões.length}
                 </p>
               </div>
             </div>
@@ -33,7 +36,7 @@ export function Seções(props: SeçõesProps) {
                   onClick={() => HandleDropDownOff(seção)}
                 />
                 <div className="w-0 h-10 border-l-2 border-bg-[#dbdbdb] mx-auto"></div>
-                <h1>Hello World</h1>
+                <Divisões />
               </>
             ) : (
               <>
