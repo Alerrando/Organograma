@@ -1,17 +1,18 @@
 import { MinusCircle, PlusCircle } from "phosphor-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { jsonOrgan } from "../../../database";
 import { Divisões } from "./Divisões";
 
 type SeçõesProps = {
-  seções: any[];
+  seções: typeof jsonOrgan;
 };
 
 export function Seções(props: SeçõesProps) {
   const { seções } = props;
   const [dropDowns, setDropDowns] = useState<any[]>(seções)
 
-  console.log(seções.length)
-  
+
+
   return (
     <>
       <div className={`border-b-${seções.length > 1 ? "2" : "0"} h-0 border-[#dbdbdb] mx-[79px]`}></div>
@@ -36,7 +37,7 @@ export function Seções(props: SeçõesProps) {
                   onClick={() => HandleDropDownOff(seção)}
                 />
                 <div className="w-0 h-10 border-l-2 border-bg-[#dbdbdb] mx-auto"></div>
-                <Divisões />
+                <Divisões divisões={seção.divisões} />
               </>
             ) : (
               <>
