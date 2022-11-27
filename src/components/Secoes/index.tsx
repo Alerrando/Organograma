@@ -4,14 +4,12 @@ import { jsonOrgan } from "../../../database";
 import { Divisões } from "./Divisões";
 
 type SeçõesProps = {
-  seções: typeof jsonOrgan;
+  seções: any[];
 };
 
 export function Seções(props: SeçõesProps) {
   const { seções } = props;
   const [dropDowns, setDropDowns] = useState<any[]>(seções)
-
-
 
   return (
     <>
