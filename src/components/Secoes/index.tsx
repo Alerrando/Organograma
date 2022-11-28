@@ -13,7 +13,7 @@ export function Seções(props: SeçõesProps) {
 
   return (
     <>
-      <div className={`border-b-${seções.length > 1 ? "2" : "0"} h-0 border-[#dbdbdb] mx-[79px]`}></div>
+      <div className={`${seções.length > 1 ? "border-b-2" : "border-b-0"} h-1 border-[#dbdbdb] mx-[79px]`}></div>
       <div className="w-auto flex justify-between gap-7">
         {dropDowns.map((seção, index) => (
           <div className="block" key={index}>
