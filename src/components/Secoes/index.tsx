@@ -18,7 +18,7 @@ export function Seções(props: SeçõesProps) {
         {dropDowns.map((seção, index) => (
           <div className="block" key={index}>
             <div className="w-0 h-10 border-l-2 border-[#dbdbdb] mx-auto"></div>
-            <div className="w-[158px] h-20 flex items-center justify-center relative border-2 border-gray-50 rounded-md text-center">
+            <div className="w-[158px] h-20 flex items-center justify-center relative border-2 border-gray-50 rounded-md text-center mx-auto">
               <div className="grid">
                 <h2 className="text-[13px]">{seção.cargo}</h2>
                 <h2 className="text-[13px] font-semibold">{seção.nome}</h2>
